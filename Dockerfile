@@ -2,7 +2,7 @@ FROM centos:centos7
 
 RUN yum -y update && yum clean all
 
-RUN yum install -y tar && yum clean all && \
+RUN yum install -y tar which && yum clean all && \
   gpg2 --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3 && \
   curl -L get.rvm.io | bash
 
