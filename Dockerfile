@@ -17,4 +17,4 @@ RUN bash -l -c "gem install passenger --pre"
 
 VOLUME ["/app"]
 
-CMD bash -l -c "cd /app && bundle install && passenger start &" && bash
+CMD bash -l -c "cd /app && bundle install && passenger start --user nobody &" && bash
